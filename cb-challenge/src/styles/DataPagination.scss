@@ -1,3 +1,29 @@
-#pagination-ul{
-    list-style-type: none;
+#data-table{
+
+    width: 50%;
+    border-collapse: collapse;
+
+    tbody{
+
+        #entry-row{
+
+            td{
+
+                border-top-width: 1px;
+                border-top-style: solid;
+                border-top-color: rgb(219, 213, 213);
+
+            }
+
+            #entry-image{
+                width: 3vw;
+                max-width: 50px;
+
+                img{
+                    height: inherit;
+                    width: inherit;
+                }
+            }
+        }
+    }
 }

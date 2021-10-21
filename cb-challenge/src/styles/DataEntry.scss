@@ -1,8 +1,25 @@
 .data-entry-container{
     display:grid;
-    grid-template-columns: 0.5fr 0.5fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 1fr 1fr 1fr 1fr;
 
     div{
         text-align: left;
+        height: 5vh;
+        width: auto;
+
+        line-height: 5vh;
+
+        img{
+            height: 50%;
+            width: 50%;
+        }
     }
+
+    #data-image{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
 }

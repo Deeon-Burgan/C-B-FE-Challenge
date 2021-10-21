@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { DataPagination } from './DataPagination';
 import { PaginationController } from './PaginationController';
+import '../styles/LandingPage.scss'
 
 export const LandingPage = () => {
 
@@ -48,11 +49,11 @@ export const LandingPage = () => {
     }
 
     return (
-        <div>
+        <div id='landing-page'>
             {loading && <div>LOADING</div>}
             <input type='text' value={filterText} onChange={(e) => onChangeFilterText(e)} />
-            {!loading && currentData.length > 0 && <DataPagination data={cData} loading={loading} currentPage={pageIndex} entriesPerPage={postsPerPage} />}
-            <PaginationController entriesPerPage={postsPerPage} totalEntries={currentData.length} callback={incrementPage} />
+            {!loading && currentData.length > 0 && <DataPagination data={cData} loading={loading} currentPage={pageIndex} entriesPerPage={postsPerPage} callback={incrementPage} totalEntries={currentData.length}/>}
+            {/* <PaginationController entriesPerPage={postsPerPage} totalEntries={currentData.length} callback={incrementPage} /> */}
         </div>
     )
 }
