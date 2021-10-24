@@ -1,25 +1,15 @@
-.data-entry-container{
-    display:grid;
-    grid-template-columns: 0.5fr 0.5fr 0.5fr 1fr 1fr 1fr 1fr;
+@import '../styles/Globals/Global.scss';
 
-    div{
-        text-align: left;
-        height: 5vh;
-        width: auto;
+#entry-row{
+    #entry-symbol{
+        color: $text-color;
 
-        line-height: 5vh;
-
-        img{
-            height: 50%;
-            width: 50%;
+        h4{
+            text-transform: uppercase;
+        }
+        h3, h4{
+            text-align: left;
+            padding-left: 30%;
         }
     }
-
-    #data-image{
-        display:flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    
 }
