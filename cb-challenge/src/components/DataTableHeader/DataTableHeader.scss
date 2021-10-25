@@ -1,0 +1,21 @@
+.data-table-header{
+    width: 75%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-height:72px;
+    input{
+        height: 25%;
+    }
+
+    h2{
+
+    }
+
+    @media screen and (max-width: 767px){
+        input{
+            width: 40%;
+        }
+    }
+}

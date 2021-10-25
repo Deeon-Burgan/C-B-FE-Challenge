@@ -7,19 +7,44 @@ export const PaginationController = ({entriesPerPage, totalEntries, callback, cu
 
     const unselectedDiv = {
         'background':'white',
-        'border':'1px groove black'
+        'border':'1px groove black',
+        'border-right':'none',
+        '&:last-child':{
+            'border-right':'1px groove black'
+        }
     }
 
     const selectedDiv = {
         'background':'#dad7de',
-        'border':'1px groove black'
+        'border':'1px groove black',
+        'border-right':'none',
+        '&:last-child':{
+            'border-right':'1px groove black'
+        }
     }
+
+    // const dis = () => {
+
+    // }
+    // const style = 'button-div';
+    // if((key + 1) == currentPage){
+    //     style += 'selected-div'
+    // }else{
+    //     style += 'unselected-div'
+    // }
 
     return (
         <ol id='pagination-controller-ol'>
             {[...Array(numberOfPages)].map((index, key) => {
+                let style = 'button-div';
+                if((key + 1) === currentPage){
+                    style += ' selected-div'
+                }else{
+                    style += ' unselected-div'
+                }
+
                 return <li key={key} className='pagination-controller-li'>
-                    <div style={(key + 1) == currentPage ? selectedDiv : unselectedDiv}onClick={() => callback(key + 1)} className='pagination-controller-index'>{key + 1}</div>
+                    <div className={style} onClick={() => callback(key + 1)}>{key + 1}</div>
                 </li>
             })}
         </ol>

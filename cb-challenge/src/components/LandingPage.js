@@ -4,6 +4,8 @@ import { DataPagination } from './DataPagination';
 import { PaginationController } from './PaginationController';
 import '../styles/LandingPage.scss'
 import { Trending } from './Trending/Trending';
+import { TitledBreak } from './Titled-Break/TitledBreak';
+import { DataTableHeader } from './DataTableHeader/DataTableHeader';
 
 export const LandingPage = () => {
 
@@ -52,8 +54,9 @@ export const LandingPage = () => {
     return (
         <div id='landing-page'>
             {loading && <div>LOADING</div>}
-            <Trending/>
-            <input type='text' value={filterText} onChange={(e) => onChangeFilterText(e)} />
+            <TitledBreak line='Top 100 Cryptos'/>
+            {/* <input type='text' value={filterText} onChange={(e) => onChangeFilterText(e)} /> */}
+            <DataTableHeader value={filterText} onChange={onChangeFilterText}/>
             {!loading && currentData.length > 0 && <DataPagination data={cData} loading={loading} currentPage={pageIndex} entriesPerPage={postsPerPage} callback={incrementPage} totalEntries={currentData.length}/>}
             {/* <PaginationController entriesPerPage={postsPerPage} totalEntries={currentData.length} callback={incrementPage} /> */}
         </div>

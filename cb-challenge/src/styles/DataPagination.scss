@@ -48,6 +48,8 @@
     }
 
     @media screen and (max-width: 767px){
+        width: 90%;
+
         thead{
             display:none;
         }
@@ -59,6 +61,14 @@
                 td{
                     display:block;
                     position:relative;
+
+                    &:first-child{
+                        border-top: 1px solid black;
+                    }
+
+                    // &:last-child{
+                    //     border-bottom: 1px solid black;
+                    // }
             
                     &#entry-image{
                         // margin: 0 50%;
