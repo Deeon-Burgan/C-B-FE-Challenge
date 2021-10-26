@@ -19,9 +19,18 @@ export const LandingPage = () => {
     const getData = async () => {
         setLoading(true);
         const result = await axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=aud");
+        // console.log(result); 
+        // .catch((error) => {
+        //     return null;
+        // });
+        // return false;
+        if(!result){
+            return false;
+        }
         setData(result.data);
         setCurrentData(result.data);
         setLoading(false);
+        return result;
     }
 
     useEffect(() => {
@@ -57,6 +66,7 @@ export const LandingPage = () => {
             <TitledBreak line='Top 100 Cryptos'/>
             {/* <input type='text' value={filterText} onChange={(e) => onChangeFilterText(e)} /> */}
             <DataTableHeader value={filterText} onChange={onChangeFilterText}/>
+            {data.length === 0 && <span>Unfortunately I have received no data, please try again!</span>}
             {!loading && currentData.length > 0 && <DataPagination data={cData} loading={loading} currentPage={pageIndex} entriesPerPage={postsPerPage} callback={incrementPage} totalEntries={currentData.length}/>}
             {/* <PaginationController entriesPerPage={postsPerPage} totalEntries={currentData.length} callback={incrementPage} /> */}
         </div>

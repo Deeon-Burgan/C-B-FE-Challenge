@@ -44,7 +44,7 @@ export const PaginationController = ({entriesPerPage, totalEntries, callback, cu
                 }
 
                 return <li key={key} className='pagination-controller-li'>
-                    <div className={style} onClick={() => callback(key + 1)}>{key + 1}</div>
+                    <div data-testid='pagination-button' className={style} onClick={() => callback(key + 1)}>{key + 1}</div>
                 </li>
             })}
         </ol>

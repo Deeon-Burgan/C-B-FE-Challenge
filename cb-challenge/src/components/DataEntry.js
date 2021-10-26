@@ -48,7 +48,7 @@ export const DataEntry = ({ data, index }) => {
     }
 
     return (
-        <tr id='entry-row'>
+        <tr id='entry-row' data-testid='testing-row'>
             <td id='entry-image'>
                 <img src={data.image} alt='logo' />
             </td>

@@ -1,6 +1,14 @@
 @import '../styles/Globals/Global.scss';
 
 #entry-row{
+
+    
+    // td{
+    //   &:nth-child(n+3){
+    //       text-align: right;
+    //   }  
+    // }
+
     #entry-symbol{
         color: $text-color;
 

@@ -57,7 +57,7 @@ export const DataPagination = ({ data, loading, currentPage, entriesPerPage, cal
                 </thead>
                 <tbody id='data-table-body'>
                     {data.map((object, index) => {
-                        return <DataEntry data={object} index={(entriesPerPage * (currentPage - 1)) + index + 1} />
+                        return <DataEntry key={index} data={object} index={(entriesPerPage * (currentPage - 1)) + index + 1} />
                     })}
                 </tbody>
                 <td colSpan='7'>
