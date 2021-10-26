@@ -4,6 +4,13 @@
     justify-content: space-around;
     align-items:center;
 
+    h2{
+        text-transform: uppercase;
+        font-size: clamp(1.5em, 3em, 150px);
+        color: rgb(255, 123, 0);
+        text-shadow: 4px 3px 2px #FF00F9;
+    }
+
     div{
         width: 25%;
         height: 1px;

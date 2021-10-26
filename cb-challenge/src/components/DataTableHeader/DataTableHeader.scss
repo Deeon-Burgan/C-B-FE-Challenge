@@ -1,3 +1,5 @@
+@import '../../styles/Globals/Global.scss';
+
 .data-table-header{
     width: 75%;
     display:flex;
@@ -10,7 +12,8 @@
     }
 
     h2{
-
+        color: #FF00F9;
+        text-shadow: 2px 2px 1px $heading-color;
     }
 
     @media screen and (max-width: 767px){

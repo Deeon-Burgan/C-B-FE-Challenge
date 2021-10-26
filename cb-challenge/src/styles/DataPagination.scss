@@ -1,9 +1,15 @@
+@import '../styles/Globals/Global.scss';
+
 #data-table{
 
     width: 75%;
     border-collapse: collapse;
     height: 50%;
     overflow: hidden;
+    thead{
+        color: $heading-color;
+        text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.507);
+    }
 
     tbody{
         width: 100%;
